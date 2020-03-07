@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>OruHelp URL Shortner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script>
+      function short() {
+        var longUrl = document.getElementById("url").value;
+        var alias = document.getElementById("alias").value;
+
+        fetch("/api/shorturl", {
+          method: "POST",
+          body: JSON.stringify({ long_url: longUrl, alias: alias }),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+          .then(res => res.json())
+          .then(response => {
+            document.getElementById("url").value = "";
+            document.getElementById("alias").value = "";
+            var input = document.createElement("input");
+            input.id = "shortInput";
+            input.value = window.location.href + response.alias;
+            var form = document.getElementById("form");
+            form.innerHTML = "";
+            form.appendChild(input);
+            document.getElementById("shortInput").select();
+          })
+          .catch(error => console.error("Error:", error));
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a class="title" href="https://oruhelp.com">OruHelp URL Shortener</a>
+      </h1>
+    </header>
+    <div class="wrap">
+      <form onsubmit="event.preventDefault(); short()">
+        <input id="url" type="url" required placeholder="Long URL" />
+        <input id="alias" type="type" placeholder="Custom Alias (OPTIONAL)" />
+        <input type="submit" value="Shorten" />
+      </form>
+      <p id="notice"></p>
+      <div id="form">
+        <!-- shortened url created here -->
+      </div>
+    </div>
+    <footer>
+      <p>Created for <a href="https://oruhelp.com">OruHelp.com</a>.</p>
+    </footer>
+  </body>
+</html>

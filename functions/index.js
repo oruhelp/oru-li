@@ -3,12 +3,12 @@ const firebase = require("firebase-admin");
 const express = require("express");
 var cors = require("cors");
 const app = express();
-var bodyParser = require('body-parser')
+var bodyParser = require("body-parser");
 
 var serviceAccount = require("./serviceAccountKey.json");
 
 app.use(cors());
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const firebaseApp = firebase.initializeApp({
@@ -24,26 +24,8 @@ function randomHash(hashLength) {
   return final;
 }
 
-function checkAvailablity(alias) {
-  return firebaseApp
-    .firestore()
-    .collection("shortUrls")
-    .doc(alias)
-    .get()
-    .then(doc => {
-      if (!doc.exists) {
-        return true;
-      } else {
-        return false;
-      }
-    })
-    .catch(() => false);
-}
 app.post("/api/shorturl", urlencodedParser, function(req, res) {
   let alias = req.body.alias || randomHash(5);
-  console.log("---------------------");
-  console.log( req.body.long_url);
-  console.log("---------------------");
 
   return firebaseApp
     .firestore()
@@ -60,7 +42,7 @@ app.post("/api/shorturl", urlencodedParser, function(req, res) {
             longUrl: req.body.long_url
           })
           .then(resp => {
-            return res.end(JSON.stringify({"alias": alias}));
+            return res.end(JSON.stringify({ alias: alias }));
           })
           .catch(err => res.end(JSON.stringify(err)));
       } else {
@@ -68,7 +50,6 @@ app.post("/api/shorturl", urlencodedParser, function(req, res) {
       }
     })
     .catch(err => {
-      console.log("Error getting document", err);
       return response.end(JSON.stringify(err));
     });
 });
@@ -83,12 +64,10 @@ app.get("/:alias", (request, response) => {
       if (!doc.exists) {
         return response.end("404");
       } else {
-        console.log("Document data:", doc.data());
         return response.redirect(doc.data().longUrl);
       }
     })
     .catch(err => {
-      console.log("Error getting document", err);
       return response.end(JSON.stringify(err));
     });
 });

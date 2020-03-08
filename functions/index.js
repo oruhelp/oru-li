@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const firebaseApp = firebase.initializeApp({
-  credential: firebase.credential.cert(serviceAccount)
+  credential: firebase.credential.cert(functions.config().fbserviceaccount)
 });
 
 function randomHash(hashLength) {
@@ -25,9 +25,6 @@ function randomHash(hashLength) {
 }
 
 app.get("/secret", (request, response) => {
-  console.log("----------------------");
-  console.log(functions.config().fbserviceaccount);
-  console.log("----------------------");
   return response.end(JSON.stringify(process.env.REACT_APP_GA));
 });
 

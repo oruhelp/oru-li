@@ -12,7 +12,19 @@ app.use(bodyParser.json());
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const firebaseApp = firebase.initializeApp({
-  credential: firebase.credential.cert(functions.config().fbserviceaccount)
+  credential: firebase.credential.cert(
+    {
+      "type": functions.config().fbserviceaccount.type,
+      "project_id": functions.config().fbserviceaccount.project_id,
+      "private_key_id": functions.config().fbserviceaccount.private_key_id,
+      "private_key": functions.config().fbserviceaccount.private_key,
+      "client_email": functions.config().fbserviceaccount.client_email,
+      "client_id": functions.config().fbserviceaccount.client_id,
+      "auth_uri": functions.config().fbserviceaccount.auth_uri,
+      "token_uri": functions.config().fbserviceaccount.token_uri,
+      "auth_provider_x509_cert_url": functions.config().fbserviceaccount.auth_provider_x509_cert_url,
+      "client_x509_cert_url": functions.config().fbserviceaccount.client_x509_cert_url
+  })
 });
 
 function randomHash(hashLength) {

@@ -1,0 +1,933 @@
+[debug] [2020-03-08T04:07:31.497Z] ----------------------------------------------------------------------
+[debug] [2020-03-08T04:07:31.499Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only functions,hosting
+[debug] [2020-03-08T04:07:31.499Z] CLI Version:   7.11.0
+[debug] [2020-03-08T04:07:31.499Z] Platform:      linux
+[debug] [2020-03-08T04:07:31.499Z] Node Version:  v12.14.0
+[debug] [2020-03-08T04:07:31.499Z] Time:          Sun Mar 08 2020 09:37:31 GMT+0530 (India Standard Time)
+[debug] [2020-03-08T04:07:31.499Z] ----------------------------------------------------------------------
+[debug] [2020-03-08T04:07:31.500Z] 
+[debug] [2020-03-08T04:07:31.510Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-08T04:07:31.510Z] > authorizing via signed-in user
+[debug] [2020-03-08T04:07:31.510Z] [iam] checking project oru-li for permissions ["firebase.projects.get"]
+[debug] [2020-03-08T04:07:31.512Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-03-08T04:07:31.512Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-08T04:07:32.002Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-08T04:07:32.094Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/oru-li:testIamPermissions  
+
+[debug] [2020-03-08T04:07:34.145Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-08T04:07:34.149Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/oru-li  
+ 
+[debug] [2020-03-08T04:07:35.105Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-08T04:07:35.115Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/oru-li/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-03-08T04:07:36.121Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/karthikeyan/Documents/projects/oru-li/functions" for Cloud Functions...
+[debug] [2020-03-08T04:07:36.281Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:07:36.281Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:07:36.281Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:07:36.282Z] [worker-~diagnostic~-82b286ee-5d77-4787-9f22-4ea5cc375771]: Assigning socketPath: /tmp/fire_emu_4089.sock
+[debug] [2020-03-08T04:07:36.283Z] [worker-~diagnostic~-82b286ee-5d77-4787-9f22-4ea5cc375771]: BUSY
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-03-08T04:07:36.582Z] [runtime-status] [4089] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:07:36.584Z] [runtime-status] [4089] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:07:36.587Z] [runtime-status] [4089] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:07:36.588Z] [runtime-status] [4089] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:07:36.589Z] [runtime-status] [4089] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account must be an object.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:117:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:07:37.870Z] [worker-~diagnostic~-82b286ee-5d77-4787-9f22-4ea5cc375771]: exited
+[debug] [2020-03-08T04:07:37.872Z] [worker-~diagnostic~-82b286ee-5d77-4787-9f22-4ea5cc375771]: FINISHED
+[info] [hosting] Rewriting /secret to http://localhost:5001/oru-li/us-central1/app for local Function app
+[debug] [2020-03-08T04:07:46.137Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T04:07:46.138Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T04:07:46.139Z] Accepted request GET /oru-li/us-central1/app/secret --> app
+[debug] [2020-03-08T04:07:46.139Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:07:46.152Z] [worker-pool] addWorker(app)
+[debug] [2020-03-08T04:07:46.152Z] [worker-pool] Adding worker with key app, total=1
+[debug] [2020-03-08T04:07:46.152Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-08T04:07:46.152Z] [worker-app-84f39567-0899-4669-87eb-491b89ef69a6]: Assigning socketPath: /tmp/fire_emu_4131.sock
+[debug] [2020-03-08T04:07:46.152Z] [worker-app-84f39567-0899-4669-87eb-491b89ef69a6]: BUSY
+[debug] [2020-03-08T04:07:46.454Z] [runtime-status] [4131] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:07:46.457Z] [runtime-status] [4131] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:07:46.459Z] [runtime-status] [4131] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:07:46.461Z] [runtime-status] [4131] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:07:46.462Z] [runtime-status] [4131] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account must be an object.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:117:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:07:46.598Z] [worker-app-84f39567-0899-4669-87eb-491b89ef69a6]: exited
+[debug] [2020-03-08T04:07:46.598Z] [worker-app-84f39567-0899-4669-87eb-491b89ef69a6]: FINISHED
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/oru-li/us-central1/app for local Function app
+[debug] [2020-03-08T04:08:46.220Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-03-08T04:08:46.221Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-03-08T04:08:46.221Z] Accepted request GET /oru-li/us-central1/app/favicon.ico --> app
+[debug] [2020-03-08T04:08:46.221Z] [worker-pool] Cleaned up workers for app: 1 --> 0
+[debug] [2020-03-08T04:08:46.228Z] [worker-pool] addWorker(app)
+[debug] [2020-03-08T04:08:46.229Z] [worker-pool] Adding worker with key app, total=1
+[debug] [2020-03-08T04:08:46.229Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-08T04:08:46.229Z] [worker-app-83718037-30ba-4693-93bf-15b5e33b7407]: Assigning socketPath: /tmp/fire_emu_4152.sock
+[debug] [2020-03-08T04:08:46.229Z] [worker-app-83718037-30ba-4693-93bf-15b5e33b7407]: BUSY
+[debug] [2020-03-08T04:08:46.543Z] [runtime-status] [4152] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:08:46.545Z] [runtime-status] [4152] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:08:46.548Z] [runtime-status] [4152] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:08:46.549Z] [runtime-status] [4152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:08:46.551Z] [runtime-status] [4152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account must be an object.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:117:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:08:46.678Z] [worker-app-83718037-30ba-4693-93bf-15b5e33b7407]: exited
+[debug] [2020-03-08T04:08:46.678Z] [worker-app-83718037-30ba-4693-93bf-15b5e33b7407]: FINISHED
+[debug] [2020-03-08T04:08:59.449Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:00.450Z] [worker-pool] Cleaned up workers for app: 1 --> 0
+[debug] [2020-03-08T04:09:00.456Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:00.456Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:00.456Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:00.456Z] [worker-~diagnostic~-e4024000-1aea-42fe-a0a2-2a90baf65eed]: Assigning socketPath: /tmp/fire_emu_4159.sock
+[debug] [2020-03-08T04:09:00.456Z] [worker-~diagnostic~-e4024000-1aea-42fe-a0a2-2a90baf65eed]: BUSY
+[debug] [2020-03-08T04:09:00.777Z] [runtime-status] [4159] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:00.779Z] [runtime-status] [4159] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:00.782Z] [runtime-status] [4159] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:00.784Z] [runtime-status] [4159] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:00.785Z] [runtime-status] [4159] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account must be an object.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:117:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:00.959Z] [worker-~diagnostic~-e4024000-1aea-42fe-a0a2-2a90baf65eed]: exited
+[debug] [2020-03-08T04:09:00.959Z] [worker-~diagnostic~-e4024000-1aea-42fe-a0a2-2a90baf65eed]: FINISHED
+[debug] [2020-03-08T04:09:01.533Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:02.536Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:09:02.545Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:02.546Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:02.546Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:02.546Z] [worker-~diagnostic~-33ebccf4-8ed0-4dbf-84c6-838527af2c37]: Assigning socketPath: /tmp/fire_emu_4166.sock
+[debug] [2020-03-08T04:09:02.546Z] [worker-~diagnostic~-33ebccf4-8ed0-4dbf-84c6-838527af2c37]: BUSY
+[debug] [2020-03-08T04:09:02.581Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:02.839Z] [runtime-status] [4166] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:02.841Z] [runtime-status] [4166] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:02.844Z] [runtime-status] [4166] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:02.845Z] [runtime-status] [4166] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:02.846Z] [runtime-status] [4166] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:02.991Z] [worker-~diagnostic~-33ebccf4-8ed0-4dbf-84c6-838527af2c37]: exited
+[debug] [2020-03-08T04:09:02.991Z] [worker-~diagnostic~-33ebccf4-8ed0-4dbf-84c6-838527af2c37]: FINISHED
+[debug] [2020-03-08T04:09:03.582Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:09:03.591Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:03.591Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:03.591Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:03.591Z] [worker-~diagnostic~-77f3b667-f996-4195-b5ea-94dfc77f8f7c]: Assigning socketPath: /tmp/fire_emu_4174.sock
+[debug] [2020-03-08T04:09:03.591Z] [worker-~diagnostic~-77f3b667-f996-4195-b5ea-94dfc77f8f7c]: BUSY
+[debug] [2020-03-08T04:09:03.882Z] [runtime-status] [4174] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:03.885Z] [runtime-status] [4174] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:03.887Z] [runtime-status] [4174] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:03.889Z] [runtime-status] [4174] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:03.890Z] [runtime-status] [4174] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:03.947Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:04.020Z] [worker-~diagnostic~-77f3b667-f996-4195-b5ea-94dfc77f8f7c]: exited
+[debug] [2020-03-08T04:09:04.022Z] [worker-~diagnostic~-77f3b667-f996-4195-b5ea-94dfc77f8f7c]: FINISHED
+[debug] [2020-03-08T04:09:04.948Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:09:04.958Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:04.958Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:04.958Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:04.959Z] [worker-~diagnostic~-74c6b518-ad9a-4a71-922a-83342254f145]: Assigning socketPath: /tmp/fire_emu_4181.sock
+[debug] [2020-03-08T04:09:04.959Z] [worker-~diagnostic~-74c6b518-ad9a-4a71-922a-83342254f145]: BUSY
+[debug] [2020-03-08T04:09:05.276Z] [runtime-status] [4181] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:05.278Z] [runtime-status] [4181] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:05.280Z] [runtime-status] [4181] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:05.282Z] [runtime-status] [4181] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:05.284Z] [runtime-status] [4181] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:16
+    functions.config().fbserviceaccount
+             ^
+
+SyntaxError: Unexpected token '.'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:05.338Z] [worker-~diagnostic~-74c6b518-ad9a-4a71-922a-83342254f145]: exited
+[debug] [2020-03-08T04:09:05.338Z] [worker-~diagnostic~-74c6b518-ad9a-4a71-922a-83342254f145]: FINISHED
+[debug] [2020-03-08T04:09:19.429Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:20.429Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:09:20.439Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:20.439Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:20.439Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:20.439Z] [worker-~diagnostic~-90002e0d-9c8b-490c-b2a5-1d145bc9a47d]: Assigning socketPath: /tmp/fire_emu_4195.sock
+[debug] [2020-03-08T04:09:20.439Z] [worker-~diagnostic~-90002e0d-9c8b-490c-b2a5-1d145bc9a47d]: BUSY
+[debug] [2020-03-08T04:09:20.787Z] [runtime-status] [4195] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:20.789Z] [runtime-status] [4195] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:20.792Z] [runtime-status] [4195] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:20.794Z] [runtime-status] [4195] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:20.796Z] [runtime-status] [4195] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+    functions.config().fbserviceaccount
+             ^
+
+SyntaxError: Unexpected token '.'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:20.864Z] [worker-~diagnostic~-90002e0d-9c8b-490c-b2a5-1d145bc9a47d]: exited
+[debug] [2020-03-08T04:09:20.864Z] [worker-~diagnostic~-90002e0d-9c8b-490c-b2a5-1d145bc9a47d]: FINISHED
+[debug] [2020-03-08T04:09:21.973Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:22.974Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:09:22.983Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:22.984Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:22.984Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:22.984Z] [worker-~diagnostic~-e3cb93c4-9410-462c-857c-56eed83c2550]: Assigning socketPath: /tmp/fire_emu_4202.sock
+[debug] [2020-03-08T04:09:22.984Z] [worker-~diagnostic~-e3cb93c4-9410-462c-857c-56eed83c2550]: BUSY
+[debug] [2020-03-08T04:09:23.308Z] [runtime-status] [4202] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:23.311Z] [runtime-status] [4202] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:23.315Z] [runtime-status] [4202] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:23.316Z] [runtime-status] [4202] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:23.318Z] [runtime-status] [4202] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:27
+    }
+    ^
+
+SyntaxError: missing ) after argument list
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:23.370Z] [worker-~diagnostic~-e3cb93c4-9410-462c-857c-56eed83c2550]: exited
+[debug] [2020-03-08T04:09:23.370Z] [worker-~diagnostic~-e3cb93c4-9410-462c-857c-56eed83c2550]: FINISHED
+[debug] [2020-03-08T04:09:28.111Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:29.112Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:09:29.118Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:29.118Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:29.119Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:29.119Z] [worker-~diagnostic~-c5f41290-53c2-4f37-a7c0-c53e06228c64]: Assigning socketPath: /tmp/fire_emu_4209.sock
+[debug] [2020-03-08T04:09:29.119Z] [worker-~diagnostic~-c5f41290-53c2-4f37-a7c0-c53e06228c64]: BUSY
+[debug] [2020-03-08T04:09:29.418Z] [runtime-status] [4209] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:29.420Z] [runtime-status] [4209] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:29.423Z] [runtime-status] [4209] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:29.425Z] [runtime-status] [4209] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:29.426Z] [runtime-status] [4209] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:27
+    }
+    ^
+
+SyntaxError: missing ) after argument list
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:29.475Z] [worker-~diagnostic~-c5f41290-53c2-4f37-a7c0-c53e06228c64]: exited
+[debug] [2020-03-08T04:09:29.476Z] [worker-~diagnostic~-c5f41290-53c2-4f37-a7c0-c53e06228c64]: FINISHED
+[debug] [2020-03-08T04:09:32.557Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:33.558Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:09:33.567Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:33.568Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:33.568Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:33.568Z] [worker-~diagnostic~-73f4ad47-04fe-4dbc-a90a-309085a2f5bd]: Assigning socketPath: /tmp/fire_emu_4218.sock
+[debug] [2020-03-08T04:09:33.568Z] [worker-~diagnostic~-73f4ad47-04fe-4dbc-a90a-309085a2f5bd]: BUSY
+[debug] [2020-03-08T04:09:33.854Z] [runtime-status] [4218] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:33.856Z] [runtime-status] [4218] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:33.859Z] [runtime-status] [4218] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:33.860Z] [runtime-status] [4218] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:33.861Z] [runtime-status] [4218] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[app]: http function initialized (http://localhost:5001/oru-li/us-central1/app).
+[debug] [2020-03-08T04:09:34.245Z] [worker-~diagnostic~-73f4ad47-04fe-4dbc-a90a-309085a2f5bd]: IDLE
+[debug] [2020-03-08T04:09:40.828Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:41.828Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-03-08T04:09:41.829Z] [worker-~diagnostic~-73f4ad47-04fe-4dbc-a90a-309085a2f5bd]: FINISHING
+[debug] [2020-03-08T04:09:41.842Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:41.842Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-03-08T04:09:41.842Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:41.842Z] [worker-~diagnostic~-fc716d8f-b471-4dcf-b58b-19bcd071aabb]: Assigning socketPath: /tmp/fire_emu_4225.sock
+[debug] [2020-03-08T04:09:41.842Z] [worker-~diagnostic~-fc716d8f-b471-4dcf-b58b-19bcd071aabb]: BUSY
+[debug] [2020-03-08T04:09:41.843Z] [worker-~diagnostic~-73f4ad47-04fe-4dbc-a90a-309085a2f5bd]: exited
+[debug] [2020-03-08T04:09:41.843Z] [worker-~diagnostic~-73f4ad47-04fe-4dbc-a90a-309085a2f5bd]: FINISHED
+[debug] [2020-03-08T04:09:42.145Z] [runtime-status] [4225] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:42.148Z] [runtime-status] [4225] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:42.150Z] [runtime-status] [4225] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:42.152Z] [runtime-status] [4225] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:42.153Z] [runtime-status] [4225] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:42.319Z] [worker-~diagnostic~-fc716d8f-b471-4dcf-b58b-19bcd071aabb]: IDLE
+[debug] [2020-03-08T04:09:47.612Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:48.613Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-03-08T04:09:48.613Z] [worker-~diagnostic~-fc716d8f-b471-4dcf-b58b-19bcd071aabb]: FINISHING
+[debug] [2020-03-08T04:09:48.614Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-03-08T04:09:48.621Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:48.621Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-03-08T04:09:48.622Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:48.622Z] [worker-~diagnostic~-ec0309a3-eeb5-4f8c-aa52-dcb4c8acbade]: Assigning socketPath: /tmp/fire_emu_4236.sock
+[debug] [2020-03-08T04:09:48.622Z] [worker-~diagnostic~-ec0309a3-eeb5-4f8c-aa52-dcb4c8acbade]: BUSY
+[debug] [2020-03-08T04:09:48.623Z] [worker-~diagnostic~-fc716d8f-b471-4dcf-b58b-19bcd071aabb]: exited
+[debug] [2020-03-08T04:09:48.623Z] [worker-~diagnostic~-fc716d8f-b471-4dcf-b58b-19bcd071aabb]: FINISHED
+[debug] [2020-03-08T04:09:48.930Z] [runtime-status] [4236] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:48.933Z] [runtime-status] [4236] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:48.936Z] [runtime-status] [4236] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:48.937Z] [runtime-status] [4236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:48.938Z] [runtime-status] [4236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:49.068Z] [worker-~diagnostic~-ec0309a3-eeb5-4f8c-aa52-dcb4c8acbade]: exited
+[debug] [2020-03-08T04:09:49.069Z] [worker-~diagnostic~-ec0309a3-eeb5-4f8c-aa52-dcb4c8acbade]: FINISHED
+[debug] [2020-03-08T04:09:52.515Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:09:53.516Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 0
+[debug] [2020-03-08T04:09:53.527Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:09:53.528Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:09:53.528Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:09:53.528Z] [worker-~diagnostic~-01228d5a-3b15-4043-9e8a-dcdabb966efb]: Assigning socketPath: /tmp/fire_emu_4243.sock
+[debug] [2020-03-08T04:09:53.528Z] [worker-~diagnostic~-01228d5a-3b15-4043-9e8a-dcdabb966efb]: BUSY
+[debug] [2020-03-08T04:09:53.824Z] [runtime-status] [4243] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:09:53.826Z] [runtime-status] [4243] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:09:53.829Z] [runtime-status] [4243] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:09:53.830Z] [runtime-status] [4243] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:09:53.831Z] [runtime-status] [4243] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:09:53.965Z] [worker-~diagnostic~-01228d5a-3b15-4043-9e8a-dcdabb966efb]: exited
+[debug] [2020-03-08T04:09:53.966Z] [worker-~diagnostic~-01228d5a-3b15-4043-9e8a-dcdabb966efb]: FINISHED
+[debug] [2020-03-08T04:09:59.375Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:10:00.377Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:10:00.389Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:10:00.390Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:10:00.390Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:10:00.390Z] [worker-~diagnostic~-7794c69e-bada-46d5-9a1b-434c8ebb5f59]: Assigning socketPath: /tmp/fire_emu_4252.sock
+[debug] [2020-03-08T04:10:00.390Z] [worker-~diagnostic~-7794c69e-bada-46d5-9a1b-434c8ebb5f59]: BUSY
+[debug] [2020-03-08T04:10:00.863Z] [runtime-status] [4252] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:10:00.866Z] [runtime-status] [4252] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:10:00.869Z] [runtime-status] [4252] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:10:00.871Z] [runtime-status] [4252] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:10:00.872Z] [runtime-status] [4252] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:10:01.018Z] [worker-~diagnostic~-7794c69e-bada-46d5-9a1b-434c8ebb5f59]: exited
+[debug] [2020-03-08T04:10:01.018Z] [worker-~diagnostic~-7794c69e-bada-46d5-9a1b-434c8ebb5f59]: FINISHED
+[debug] [2020-03-08T04:10:05.821Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:10:06.822Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:10:06.832Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:10:06.832Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:10:06.832Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:10:06.832Z] [worker-~diagnostic~-a3879a6e-97d4-4ec8-8c0b-a795625e34fb]: Assigning socketPath: /tmp/fire_emu_4259.sock
+[debug] [2020-03-08T04:10:06.833Z] [worker-~diagnostic~-a3879a6e-97d4-4ec8-8c0b-a795625e34fb]: BUSY
+[debug] [2020-03-08T04:10:07.142Z] [runtime-status] [4259] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:10:07.144Z] [runtime-status] [4259] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:10:07.147Z] [runtime-status] [4259] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:10:07.149Z] [runtime-status] [4259] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:10:07.150Z] [runtime-status] [4259] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:10:07.284Z] [worker-~diagnostic~-a3879a6e-97d4-4ec8-8c0b-a795625e34fb]: exited
+[debug] [2020-03-08T04:10:07.284Z] [worker-~diagnostic~-a3879a6e-97d4-4ec8-8c0b-a795625e34fb]: FINISHED
+[debug] [2020-03-08T04:10:10.001Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:10:11.001Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:10:11.013Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:10:11.014Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:10:11.014Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:10:11.014Z] [worker-~diagnostic~-be5f64fb-909b-4710-9154-773d223a7920]: Assigning socketPath: /tmp/fire_emu_4266.sock
+[debug] [2020-03-08T04:10:11.014Z] [worker-~diagnostic~-be5f64fb-909b-4710-9154-773d223a7920]: BUSY
+[debug] [2020-03-08T04:10:11.324Z] [runtime-status] [4266] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:10:11.327Z] [runtime-status] [4266] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:10:11.329Z] [runtime-status] [4266] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:10:11.331Z] [runtime-status] [4266] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:10:11.332Z] [runtime-status] [4266] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:10:11.466Z] [worker-~diagnostic~-be5f64fb-909b-4710-9154-773d223a7920]: exited
+[debug] [2020-03-08T04:10:11.466Z] [worker-~diagnostic~-be5f64fb-909b-4710-9154-773d223a7920]: FINISHED
+[debug] [2020-03-08T04:10:17.766Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:10:18.767Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:10:18.775Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:10:18.775Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:10:18.775Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:10:18.775Z] [worker-~diagnostic~-f0e050ff-e851-4532-86ba-7d1cc0e1062c]: Assigning socketPath: /tmp/fire_emu_4273.sock
+[debug] [2020-03-08T04:10:18.776Z] [worker-~diagnostic~-f0e050ff-e851-4532-86ba-7d1cc0e1062c]: BUSY
+[debug] [2020-03-08T04:10:19.074Z] [runtime-status] [4273] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:10:19.074Z] [runtime-status] [4273] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:10:19.077Z] [runtime-status] [4273] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:10:19.078Z] [runtime-status] [4273] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:10:19.079Z] [runtime-status] [4273] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:10:19.213Z] [worker-~diagnostic~-f0e050ff-e851-4532-86ba-7d1cc0e1062c]: exited
+[debug] [2020-03-08T04:10:19.213Z] [worker-~diagnostic~-f0e050ff-e851-4532-86ba-7d1cc0e1062c]: FINISHED
+[debug] [2020-03-08T04:10:24.395Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:10:25.397Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:10:25.409Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:10:25.410Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:10:25.410Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:10:25.410Z] [worker-~diagnostic~-0fbfee6a-08f6-4356-be8e-ddf85f6497cc]: Assigning socketPath: /tmp/fire_emu_4281.sock
+[debug] [2020-03-08T04:10:25.410Z] [worker-~diagnostic~-0fbfee6a-08f6-4356-be8e-ddf85f6497cc]: BUSY
+[debug] [2020-03-08T04:10:25.697Z] [runtime-status] [4281] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:10:25.699Z] [runtime-status] [4281] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:10:25.702Z] [runtime-status] [4281] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:10:25.704Z] [runtime-status] [4281] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:10:25.705Z] [runtime-status] [4281] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:10:25.825Z] [worker-~diagnostic~-0fbfee6a-08f6-4356-be8e-ddf85f6497cc]: exited
+[debug] [2020-03-08T04:10:25.825Z] [worker-~diagnostic~-0fbfee6a-08f6-4356-be8e-ddf85f6497cc]: FINISHED
+[debug] [2020-03-08T04:10:28.667Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:10:29.667Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:10:29.676Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:10:29.677Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:10:29.677Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:10:29.677Z] [worker-~diagnostic~-315b82b7-c664-4248-bc6c-7a3cc0dd699d]: Assigning socketPath: /tmp/fire_emu_4288.sock
+[debug] [2020-03-08T04:10:29.677Z] [worker-~diagnostic~-315b82b7-c664-4248-bc6c-7a3cc0dd699d]: BUSY
+[debug] [2020-03-08T04:10:30.005Z] [runtime-status] [4288] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:10:30.008Z] [runtime-status] [4288] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:10:30.010Z] [runtime-status] [4288] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:10:30.012Z] [runtime-status] [4288] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:10:30.013Z] [runtime-status] [4288] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:10:30.142Z] [worker-~diagnostic~-315b82b7-c664-4248-bc6c-7a3cc0dd699d]: exited
+[debug] [2020-03-08T04:10:30.142Z] [worker-~diagnostic~-315b82b7-c664-4248-bc6c-7a3cc0dd699d]: FINISHED
+[debug] [2020-03-08T04:10:34.630Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:10:35.631Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:10:35.643Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:10:35.643Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:10:35.644Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:10:35.644Z] [worker-~diagnostic~-21073a62-1875-4da4-92d7-6ed04e593c83]: Assigning socketPath: /tmp/fire_emu_4295.sock
+[debug] [2020-03-08T04:10:35.644Z] [worker-~diagnostic~-21073a62-1875-4da4-92d7-6ed04e593c83]: BUSY
+[debug] [2020-03-08T04:10:35.945Z] [runtime-status] [4295] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:10:35.947Z] [runtime-status] [4295] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:10:35.950Z] [runtime-status] [4295] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:10:35.951Z] [runtime-status] [4295] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:10:35.952Z] [runtime-status] [4295] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Service account object must contain a string "project_id" property.
+    at FirebaseAppError.FirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:88:28)
+    at new FirebaseAppError (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/utils/error.js:123:28)
+    at new ServiceAccount (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:133:19)
+    at new ServiceAccountCredential (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/auth/credential.js:68:15)
+    at Object.cert (/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/firebase-namespace.js:220:58)
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:15:35)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:10:36.087Z] [worker-~diagnostic~-21073a62-1875-4da4-92d7-6ed04e593c83]: exited
+[debug] [2020-03-08T04:10:36.087Z] [worker-~diagnostic~-21073a62-1875-4da4-92d7-6ed04e593c83]: FINISHED
+[debug] [2020-03-08T04:10:57.831Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:10:58.831Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:10:58.842Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:10:58.842Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:10:58.842Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:10:58.842Z] [worker-~diagnostic~-9866e671-e51b-493e-957d-0fe3bab9a621]: Assigning socketPath: /tmp/fire_emu_4319.sock
+[debug] [2020-03-08T04:10:58.842Z] [worker-~diagnostic~-9866e671-e51b-493e-957d-0fe3bab9a621]: BUSY
+[debug] [2020-03-08T04:10:59.137Z] [runtime-status] [4319] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:10:59.140Z] [runtime-status] [4319] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:10:59.142Z] [runtime-status] [4319] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:10:59.144Z] [runtime-status] [4319] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:10:59.145Z] [runtime-status] [4319] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:27
+  })
+  ^
+
+SyntaxError: Unexpected token '}'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:10:59.194Z] [worker-~diagnostic~-9866e671-e51b-493e-957d-0fe3bab9a621]: exited
+[debug] [2020-03-08T04:10:59.194Z] [worker-~diagnostic~-9866e671-e51b-493e-957d-0fe3bab9a621]: FINISHED
+[debug] [2020-03-08T04:11:00.548Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:11:01.549Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:11:01.559Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:11:01.560Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:11:01.560Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:11:01.560Z] [worker-~diagnostic~-75b428fd-fd29-49a6-8271-074c87b62d65]: Assigning socketPath: /tmp/fire_emu_4326.sock
+[debug] [2020-03-08T04:11:01.560Z] [worker-~diagnostic~-75b428fd-fd29-49a6-8271-074c87b62d65]: BUSY
+[debug] [2020-03-08T04:11:01.860Z] [runtime-status] [4326] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:11:01.863Z] [runtime-status] [4326] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:11:01.865Z] [runtime-status] [4326] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:11:01.866Z] [runtime-status] [4326] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:11:01.868Z] [runtime-status] [4326] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  TypeError: Cannot read property 'client_x509_cert_url' of undefined
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:26:66)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:11:01.996Z] [worker-~diagnostic~-75b428fd-fd29-49a6-8271-074c87b62d65]: exited
+[debug] [2020-03-08T04:11:01.996Z] [worker-~diagnostic~-75b428fd-fd29-49a6-8271-074c87b62d65]: FINISHED
+[debug] [2020-03-08T04:11:08.981Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:11:09.982Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:11:09.995Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:11:09.995Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:11:09.995Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:11:09.996Z] [worker-~diagnostic~-96f78291-178c-4248-ad4d-55bfc3ed370b]: Assigning socketPath: /tmp/fire_emu_4333.sock
+[debug] [2020-03-08T04:11:09.996Z] [worker-~diagnostic~-96f78291-178c-4248-ad4d-55bfc3ed370b]: BUSY
+[debug] [2020-03-08T04:11:10.306Z] [runtime-status] [4333] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:11:10.308Z] [runtime-status] [4333] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:11:10.311Z] [runtime-status] [4333] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:11:10.312Z] [runtime-status] [4333] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:11:10.314Z] [runtime-status] [4333] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:11:10.367Z] [worker-~diagnostic~-96f78291-178c-4248-ad4d-55bfc3ed370b]: exited
+[debug] [2020-03-08T04:11:10.367Z] [worker-~diagnostic~-96f78291-178c-4248-ad4d-55bfc3ed370b]: FINISHED
+[debug] [2020-03-08T04:11:25.770Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:11:26.771Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:11:26.778Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:11:26.779Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:11:26.779Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:11:26.779Z] [worker-~diagnostic~-e31b61fc-a469-48e3-991a-dba512801613]: Assigning socketPath: /tmp/fire_emu_4348.sock
+[debug] [2020-03-08T04:11:26.779Z] [worker-~diagnostic~-e31b61fc-a469-48e3-991a-dba512801613]: BUSY
+[debug] [2020-03-08T04:11:27.068Z] [runtime-status] [4348] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:11:27.070Z] [runtime-status] [4348] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:11:27.073Z] [runtime-status] [4348] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:11:27.075Z] [runtime-status] [4348] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:11:27.076Z] [runtime-status] [4348] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:11:27.125Z] [worker-~diagnostic~-e31b61fc-a469-48e3-991a-dba512801613]: exited
+[debug] [2020-03-08T04:11:27.126Z] [worker-~diagnostic~-e31b61fc-a469-48e3-991a-dba512801613]: FINISHED
+[debug] [2020-03-08T04:11:39.587Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:11:40.588Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:11:40.597Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:11:40.597Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:11:40.597Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:11:40.598Z] [worker-~diagnostic~-1d9bd7ea-a48f-476a-abce-5090dd77467a]: Assigning socketPath: /tmp/fire_emu_4361.sock
+[debug] [2020-03-08T04:11:40.598Z] [worker-~diagnostic~-1d9bd7ea-a48f-476a-abce-5090dd77467a]: BUSY
+[debug] [2020-03-08T04:11:40.922Z] [runtime-status] [4361] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:11:40.925Z] [runtime-status] [4361] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:11:40.928Z] [runtime-status] [4361] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:11:40.929Z] [runtime-status] [4361] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:11:40.930Z] [runtime-status] [4361] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:11:40.989Z] [worker-~diagnostic~-1d9bd7ea-a48f-476a-abce-5090dd77467a]: exited
+[debug] [2020-03-08T04:11:40.989Z] [worker-~diagnostic~-1d9bd7ea-a48f-476a-abce-5090dd77467a]: FINISHED
+[debug] [2020-03-08T04:11:52.805Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:11:53.806Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:11:53.812Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:11:53.812Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:11:53.812Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:11:53.813Z] [worker-~diagnostic~-ee9f9e56-b215-47e2-8353-763519092962]: Assigning socketPath: /tmp/fire_emu_4374.sock
+[debug] [2020-03-08T04:11:53.813Z] [worker-~diagnostic~-ee9f9e56-b215-47e2-8353-763519092962]: BUSY
+[debug] [2020-03-08T04:11:54.148Z] [runtime-status] [4374] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:11:54.150Z] [runtime-status] [4374] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:11:54.153Z] [runtime-status] [4374] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:11:54.154Z] [runtime-status] [4374] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:11:54.155Z] [runtime-status] [4374] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:11:54.206Z] [worker-~diagnostic~-ee9f9e56-b215-47e2-8353-763519092962]: exited
+[debug] [2020-03-08T04:11:54.207Z] [worker-~diagnostic~-ee9f9e56-b215-47e2-8353-763519092962]: FINISHED
+[debug] [2020-03-08T04:12:06.079Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:12:07.080Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:12:07.088Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:12:07.088Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:12:07.088Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:12:07.088Z] [worker-~diagnostic~-b0b47568-4286-48fd-93c9-1c339c7de343]: Assigning socketPath: /tmp/fire_emu_4387.sock
+[debug] [2020-03-08T04:12:07.088Z] [worker-~diagnostic~-b0b47568-4286-48fd-93c9-1c339c7de343]: BUSY
+[debug] [2020-03-08T04:12:07.405Z] [runtime-status] [4387] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:12:07.407Z] [runtime-status] [4387] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:12:07.410Z] [runtime-status] [4387] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:12:07.411Z] [runtime-status] [4387] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:12:07.413Z] [runtime-status] [4387] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:12:07.467Z] [worker-~diagnostic~-b0b47568-4286-48fd-93c9-1c339c7de343]: exited
+[debug] [2020-03-08T04:12:07.468Z] [worker-~diagnostic~-b0b47568-4286-48fd-93c9-1c339c7de343]: FINISHED
+[debug] [2020-03-08T04:12:19.287Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:12:20.288Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:12:20.293Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:12:20.294Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:12:20.294Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:12:20.294Z] [worker-~diagnostic~-0ac3883c-0a95-489d-96ff-8d741a523224]: Assigning socketPath: /tmp/fire_emu_4400.sock
+[debug] [2020-03-08T04:12:20.294Z] [worker-~diagnostic~-0ac3883c-0a95-489d-96ff-8d741a523224]: BUSY
+[debug] [2020-03-08T04:12:20.662Z] [runtime-status] [4400] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:12:20.664Z] [runtime-status] [4400] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:12:20.670Z] [runtime-status] [4400] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:12:20.670Z] [runtime-status] [4400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:12:20.671Z] [runtime-status] [4400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:12:20.720Z] [worker-~diagnostic~-0ac3883c-0a95-489d-96ff-8d741a523224]: exited
+[debug] [2020-03-08T04:12:20.720Z] [worker-~diagnostic~-0ac3883c-0a95-489d-96ff-8d741a523224]: FINISHED
+[debug] [2020-03-08T04:12:32.069Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:12:33.070Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:12:33.082Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:12:33.083Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:12:33.083Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:12:33.084Z] [worker-~diagnostic~-eb2014ce-f3b9-4e74-a5d3-f2bef80cf233]: Assigning socketPath: /tmp/fire_emu_4418.sock
+[debug] [2020-03-08T04:12:33.084Z] [worker-~diagnostic~-eb2014ce-f3b9-4e74-a5d3-f2bef80cf233]: BUSY
+[debug] [2020-03-08T04:12:33.390Z] [runtime-status] [4418] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:12:33.393Z] [runtime-status] [4418] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:12:33.396Z] [runtime-status] [4418] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:12:33.398Z] [runtime-status] [4418] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:12:33.399Z] [runtime-status] [4418] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:12:33.449Z] [worker-~diagnostic~-eb2014ce-f3b9-4e74-a5d3-f2bef80cf233]: exited
+[debug] [2020-03-08T04:12:33.449Z] [worker-~diagnostic~-eb2014ce-f3b9-4e74-a5d3-f2bef80cf233]: FINISHED
+[debug] [2020-03-08T04:12:43.560Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:12:44.560Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:12:44.566Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:12:44.567Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:12:44.567Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:12:44.567Z] [worker-~diagnostic~-1723c020-28e1-42cc-ac57-083e18a9f867]: Assigning socketPath: /tmp/fire_emu_4429.sock
+[debug] [2020-03-08T04:12:44.567Z] [worker-~diagnostic~-1723c020-28e1-42cc-ac57-083e18a9f867]: BUSY
+[debug] [2020-03-08T04:12:44.883Z] [runtime-status] [4429] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:12:44.885Z] [runtime-status] [4429] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:12:44.888Z] [runtime-status] [4429] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:12:44.890Z] [runtime-status] [4429] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:12:44.891Z] [runtime-status] [4429] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:12:44.947Z] [worker-~diagnostic~-1723c020-28e1-42cc-ac57-083e18a9f867]: exited
+[debug] [2020-03-08T04:12:44.947Z] [worker-~diagnostic~-1723c020-28e1-42cc-ac57-083e18a9f867]: FINISHED
+[debug] [2020-03-08T04:12:54.543Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:12:55.544Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:12:55.555Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:12:55.555Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:12:55.555Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:12:55.555Z] [worker-~diagnostic~-0d4d2899-056b-4387-a7c0-d9786c3cfe68]: Assigning socketPath: /tmp/fire_emu_4446.sock
+[debug] [2020-03-08T04:12:55.555Z] [worker-~diagnostic~-0d4d2899-056b-4387-a7c0-d9786c3cfe68]: BUSY
+[debug] [2020-03-08T04:12:55.870Z] [runtime-status] [4446] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:12:55.873Z] [runtime-status] [4446] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:12:55.876Z] [runtime-status] [4446] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:12:55.877Z] [runtime-status] [4446] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:12:55.879Z] [runtime-status] [4446] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /home/karthikeyan/Documents/projects/oru-li/functions/index.js:17
+      "type": functions.config().fbserviceaccount.,
+                                                  ^
+
+SyntaxError: Unexpected token ','
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:12:55.929Z] [worker-~diagnostic~-0d4d2899-056b-4387-a7c0-d9786c3cfe68]: exited
+[debug] [2020-03-08T04:12:55.930Z] [worker-~diagnostic~-0d4d2899-056b-4387-a7c0-d9786c3cfe68]: FINISHED
+[debug] [2020-03-08T04:13:04.366Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:13:04.675Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:13:04.936Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:13:05.119Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:13:05.294Z] File /home/karthikeyan/Documents/projects/oru-li/functions/index.js changed, reloading triggers
+[debug] [2020-03-08T04:13:06.296Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-03-08T04:13:06.306Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T04:13:06.307Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T04:13:06.307Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T04:13:06.307Z] [worker-~diagnostic~-8da27885-9a08-47c5-b10b-e872dba4eed2]: Assigning socketPath: /tmp/fire_emu_4457.sock
+[debug] [2020-03-08T04:13:06.307Z] [worker-~diagnostic~-8da27885-9a08-47c5-b10b-e872dba4eed2]: BUSY
+[debug] [2020-03-08T04:13:06.614Z] [runtime-status] [4457] Functions runtime initialized. {"cwd":"/home/karthikeyan/Documents/projects/oru-li/functions","node_version":"12.14.0"}
+[debug] [2020-03-08T04:13:06.616Z] [runtime-status] [4457] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T04:13:06.619Z] [runtime-status] [4457] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T04:13:06.620Z] [runtime-status] [4457] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T04:13:06.622Z] [runtime-status] [4457] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/karthikeyan/Documents/projects/oru-li/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  TypeError: Cannot read property 'type' of undefined
+    at Object.<anonymous> (/home/karthikeyan/Documents/projects/oru-li/functions/index.js:17:50)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-08T04:13:06.749Z] [worker-~diagnostic~-8da27885-9a08-47c5-b10b-e872dba4eed2]: exited
+[debug] [2020-03-08T04:13:06.749Z] [worker-~diagnostic~-8da27885-9a08-47c5-b10b-e872dba4eed2]: FINISHED

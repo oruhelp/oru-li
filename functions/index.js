@@ -17,7 +17,7 @@ const firebaseApp = firebase.initializeApp({
       "type": functions.config().fbserviceaccount.type,
       "project_id": functions.config().fbserviceaccount.project_id,
       "private_key_id": functions.config().fbserviceaccount.private_key_id,
-      "private_key": functions.config().fbserviceaccount.private_key,
+      "private_key": functions.config().fbserviceaccount.private_key.replace(/\\n/g, '\n'),
       "client_email": functions.config().fbserviceaccount.client_email,
       "client_id": functions.config().fbserviceaccount.client_id,
       "auth_uri": functions.config().fbserviceaccount.auth_uri,

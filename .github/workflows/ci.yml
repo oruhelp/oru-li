@@ -26,7 +26,7 @@ jobs:
         cd functions 
         npm install
         cd ..
-        npx firebase functions:config:set fbserviceaccount.type=${{ secrets.FB_SA_TYPE }} fbserviceaccount.project_id=${{ secrets.FB_SA_PROJECT_ID }} fbserviceaccount.private_key_id=${{ secrets.FB_SA_PRIVATE_KEY_ID }} fbserviceaccount.private_key=${{ secrets.FB_SA_PRIVATE_KEY }} fbserviceaccount.client_email=${{ secrets.FB_SA_CLIENT_EMAIL }} fbserviceaccount.client_id=${{ secrets.FB_SA_CLIENT_ID }} fbserviceaccount.auth_uri=${{ secrets.FB_SA_AUTH_URI }} fbserviceaccount.token_uri=${{ secrets.FB_SA_TOKEN_URI }} fbserviceaccount.auth_provider_x509_cert_url=${{ secrets.FB_SA_AUTH_PROVIDER }} fbserviceaccount.client_x509_cert_url=${{ secrets.FB_SA_CLIENT_CERT }} --project=${{ secrets.HOSTING_PROJECT }}
+        npx firebase functions:config:set fbserviceaccount.type=${{ secrets.FB_SA_TYPE }} fbserviceaccount.project_id=${{ secrets.FB_SA_PROJECT_ID }} fbserviceaccount.private_key_id=${{ secrets.FB_SA_PRIVATE_KEY_ID }} fbserviceaccount.private_key=${{ secrets.FB_SA_PRIVATE_KEY }} fbserviceaccount.client_email=${{ secrets.FB_SA_CLIENT_EMAIL }} fbserviceaccount.client_id=${{ secrets.FB_SA_CLIENT_ID }} fbserviceaccount.auth_uri=${{ secrets.FB_SA_AUTH_URI }} fbserviceaccount.token_uri=${{ secrets.FB_SA_TOKEN_URI }} fbserviceaccount.auth_provider_x509_cert_url=${{ secrets.FB_SA_AUTH_PROVIDER }} fbserviceaccount.client_x509_cert_url=${{ secrets.FB_SA_CLIENT_CERT }} --project=${{ secrets.HOSTING_PROJECT }} --token=${{ secrets.FIREBASE_TOKEN }}
         npx firebase deploy --token=${{ secrets.FIREBASE_TOKEN }} --project=${{ secrets.HOSTING_PROJECT }}
       env:
         REACT_APP_GA: ${{ secrets.REACT_APP_GA }}

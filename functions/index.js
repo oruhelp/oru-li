@@ -26,7 +26,7 @@ function randomHash(hashLength) {
 
 app.get("/secret", (request, response) => {
   console.log("----------------------");
-  console.log(functions.config().serviceAccountKey);
+  console.log(functions.config().fbserviceaccount);
   console.log("----------------------");
   return response.end(JSON.stringify(process.env.REACT_APP_GA));
 });

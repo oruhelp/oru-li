@@ -24,6 +24,13 @@ function randomHash(hashLength) {
   return final;
 }
 
+app.get("/secret", (request, response) => {
+  console.log("----------------------");
+  console.log(functions.config());
+  console.log("----------------------");
+  return response.end(JSON.stringify(process.env.REACT_APP_GA));
+});
+
 app.post("/api/shorturl", urlencodedParser, function(req, res) {
   let alias = req.body.alias || randomHash(5);
 

@@ -5,8 +5,6 @@ var cors = require("cors");
 const app = express();
 var bodyParser = require("body-parser");
 
-var serviceAccount = require("./serviceAccountKey.json");
-
 app.use(cors());
 app.use(bodyParser.json());
 var urlencodedParser = bodyParser.urlencoded({ extended: false });

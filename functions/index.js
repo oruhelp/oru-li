@@ -106,7 +106,7 @@ app.get("/:alias", (request, response) => {
     }
   };
   if(request.params.alias.toLowerCase().startsWith('r-')) {
-    return response.send(template1.replace("___###input###___", input1));
+    return response.send(template1.replace("___###input###___", JSON.stringify(input1)));
   } else {
   return firebaseApp
     .firestore()

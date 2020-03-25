@@ -70,8 +70,43 @@ app.post("/api/shorturl", urlencodedParser, function(req, res) {
 });
 
 app.get("/:alias", (request, response) => {
+  var input1 = {
+    sender: {
+      name: "Karthikeyan",
+      role: "Volunteer",
+      phoneNumber: "+91-7708662218",
+      email: "karthikeyan@gmail.com"
+    },
+    approver: {
+      name: "Surya Kumar",
+      role: "President",
+      phoneNumber: "+91-1234567890",
+      email: "suryakmr@gmail.com"
+    },
+    receiver: {
+      name: "Raj Mohan",
+      phoneNumber: "+91-9659657101",
+      email: "rajfml@gmail.com"
+    },
+    org: {
+      name: "Aarathy Charitable Trust",
+      addressLine1: "10, VGP Santhi Nagar",
+      addressLine2: "Pallikaranai, Chennai",
+      countryAndPincode: "India, 600100",
+      phoneNumber: "+91-0987654321",
+      email: "info@aarathy.org",
+      website: "www.aarathy.org"
+    },
+    donation: {
+      id: "23423243",
+      amount: "1000",
+      date: "18/Mar/2020",
+      description: "This is donated for student education",
+      footer: "Thank you for the donation."
+    }
+  };
   if(request.params.alias.toLowerCase().startsWith('r-')) {
-    return response.send(template1);
+    return response.send(template1.replace("___###input###___", input1));
   } else {
   return firebaseApp
     .firestore()

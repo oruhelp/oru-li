@@ -69,6 +69,9 @@ app.post("/api/shorturl", urlencodedParser, function(req, res) {
 });
 
 app.get("/:alias", (request, response) => {
+  if(request.params.alias.toLowerCase().startsWith('r-')) {
+    return response.end(request.params.alias);
+  } else {
   return firebaseApp
     .firestore()
     .collection("shortUrls")
@@ -84,6 +87,7 @@ app.get("/:alias", (request, response) => {
     .catch(err => {
       return response.end(JSON.stringify(err));
     });
+  }
 });
 
 exports.app = functions.https.onRequest(app);

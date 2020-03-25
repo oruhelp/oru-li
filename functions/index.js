@@ -4,6 +4,7 @@ const express = require("express");
 var cors = require("cors");
 const app = express();
 var bodyParser = require("body-parser");
+const {template1} = require("./receipt-template");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -70,7 +71,7 @@ app.post("/api/shorturl", urlencodedParser, function(req, res) {
 
 app.get("/:alias", (request, response) => {
   if(request.params.alias.toLowerCase().startsWith('r-')) {
-    return response.end(request.params.alias);
+    return response.send(template1);
   } else {
   return firebaseApp
     .firestore()

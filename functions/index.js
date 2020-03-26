@@ -4,25 +4,28 @@ const express = require("express");
 var cors = require("cors");
 const app = express();
 var bodyParser = require("body-parser");
-const {template1} = require("./receipt-template");
+const { template1 } = require("./receipt-template");
 
 app.use(cors());
 app.use(bodyParser.json());
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const firebaseApp = firebase.initializeApp({
-  credential: firebase.credential.cert(
-    {
-      "type": functions.config().fbserviceaccount.type,
-      "project_id": functions.config().fbserviceaccount.project_id,
-      "private_key_id": functions.config().fbserviceaccount.private_key_id,
-      "private_key": functions.config().fbserviceaccount.private_key.replace(/\\n/g, '\n'),
-      "client_email": functions.config().fbserviceaccount.client_email,
-      "client_id": functions.config().fbserviceaccount.client_id,
-      "auth_uri": functions.config().fbserviceaccount.auth_uri,
-      "token_uri": functions.config().fbserviceaccount.token_uri,
-      "auth_provider_x509_cert_url": functions.config().fbserviceaccount.auth_provider_x509_cert_url,
-      "client_x509_cert_url": functions.config().fbserviceaccount.client_x509_cert_url
+  credential: firebase.credential.cert({
+    type: functions.config().fbserviceaccount.type,
+    project_id: functions.config().fbserviceaccount.project_id,
+    private_key_id: functions.config().fbserviceaccount.private_key_id,
+    private_key: functions
+      .config()
+      .fbserviceaccount.private_key.replace(/\\n/g, "\n"),
+    client_email: functions.config().fbserviceaccount.client_email,
+    client_id: functions.config().fbserviceaccount.client_id,
+    auth_uri: functions.config().fbserviceaccount.auth_uri,
+    token_uri: functions.config().fbserviceaccount.token_uri,
+    auth_provider_x509_cert_url: functions.config().fbserviceaccount
+      .auth_provider_x509_cert_url,
+    client_x509_cert_url: functions.config().fbserviceaccount
+      .client_x509_cert_url
   })
 });
 
@@ -69,7 +72,6 @@ app.post("/api/shorturl", urlencodedParser, function(req, res) {
     });
 });
 
-
 app.post("/api/shorturl/receipt", urlencodedParser, function(req, res) {
   let alias = randomHash(5);
 
@@ -99,59 +101,43 @@ app.post("/api/shorturl/receipt", urlencodedParser, function(req, res) {
 });
 
 app.get("/:alias", (request, response) => {
-  var input1 = {
-    sender: {
-      name: "Karthikeyan",
-      role: "Volunteer",
-      phoneNumber: "+91-7708662218",
-      email: "karthikeyan@gmail.com"
-    },
-    approver: {
-      name: "Surya Kumar",
-      role: "President",
-      phoneNumber: "+91-1234567890",
-      email: "suryakmr@gmail.com"
-    },
-    receiver: {
-      name: "Raj Mohan",
-      phoneNumber: "+91-9659657101",
-      email: "rajfml@gmail.com"
-    },
-    org: {
-      name: "Aarathy Charitable Trust",
-      addressLine1: "10, VGP Santhi Nagar",
-      addressLine2: "Pallikaranai, Chennai",
-      countryAndPincode: "India, 600100",
-      phoneNumber: "+91-0987654321",
-      email: "info@aarathy.org",
-      website: "www.aarathy.org"
-    },
-    donation: {
-      id: "23423243",
-      amount: "1000",
-      date: "18/Mar/2020",
-      description: "This is donated for student education",
-      footer: "Thank you for the donation."
-    }
-  };
-  if(request.params.alias.toLowerCase().startsWith('r-')) {
-    return response.send(template1.replace("___###input###___", JSON.stringify(input1)));
-  } else {
-  return firebaseApp
-    .firestore()
-    .collection("shortUrls")
-    .doc(request.params.alias)
-    .get()
-    .then(doc => {
-      if (!doc.exists) {
-        return response.end("404");
-      } else {
-        return response.redirect(doc.data().longUrl);
-      }
-    })
-    .catch(err => {
-      return response.end(JSON.stringify(err));
-    });
+  // receipt
+  if (request.params.alias.toLowerCase().startsWith("r-")) {
+    return firebaseApp
+      .firestore()
+      .collection("receipts")
+      .doc(request.params.alias.replace("r-", ""))
+      .get()
+      .then(doc => {
+        if (!doc.exists) {
+          return response.end("404");
+        } else {
+          return response.send(
+            template1.replace("___###input###___", JSON.stringify(doc.data()))
+          );
+        }
+      })
+      .catch(err => {
+        return response.end(JSON.stringify(err));
+      });
+  }
+  // other short urls
+  else {
+    return firebaseApp
+      .firestore()
+      .collection("shortUrls")
+      .doc(request.params.alias)
+      .get()
+      .then(doc => {
+        if (!doc.exists) {
+          return response.end("404");
+        } else {
+          return response.redirect(doc.data().longUrl);
+        }
+      })
+      .catch(err => {
+        return response.end(JSON.stringify(err));
+      });
   }
 });
 

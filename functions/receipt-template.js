@@ -1,7 +1,7 @@
 const template1 = `<!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title id="receipt_org_title">OruHelp Receipt</title>
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
@@ -387,6 +387,7 @@ const template1 = `<!DOCTYPE html>
       );
 
       // org
+      $("#receipt_org_title").text(receipt["org"]["name"]);
       $("#receipt_org_name").text(receipt["org"]["name"]);
       $("#receipt_org_name").attr("href", receipt["org"]["website"]);
       $("#receipt_org_addressLine1").text(receipt["org"]["addressLine1"]);

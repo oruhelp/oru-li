@@ -69,6 +69,35 @@ app.post("/api/shorturl", urlencodedParser, function(req, res) {
     });
 });
 
+
+app.post("/api/shorturl/receipt", urlencodedParser, function(req, res) {
+  let alias = randomHash(5);
+
+  return firebaseApp
+    .firestore()
+    .collection("receipts")
+    .doc(alias)
+    .get()
+    .then(doc => {
+      if (!doc.exists) {
+        return firebaseApp
+          .firestore()
+          .collection("receipts")
+          .doc(alias)
+          .set(req.body)
+          .then(resp => {
+            return res.end(JSON.stringify({ alias: "r-" + alias }));
+          })
+          .catch(err => res.end(JSON.stringify(err)));
+      } else {
+        return response.end("Not Available, try again");
+      }
+    })
+    .catch(err => {
+      return response.end(JSON.stringify(err));
+    });
+});
+
 app.get("/:alias", (request, response) => {
   var input1 = {
     sender: {

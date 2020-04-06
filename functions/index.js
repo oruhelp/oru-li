@@ -4,7 +4,7 @@ const express = require("express");
 var cors = require("cors");
 const app = express();
 var bodyParser = require("body-parser");
-const { template1 } = require("./receipt-template");
+const { template1, getCompletedHtml } = require("./receipt-template");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -112,9 +112,7 @@ app.get("/:alias", (request, response) => {
         if (!doc.exists) {
           return response.end("404");
         } else {
-          return response.send(
-            template1.replace("___###input###___", JSON.stringify(doc.data()))
-          );
+          return response.send(getCompletedHtml(template1, doc.data()));
         }
       })
       .catch(err => {
